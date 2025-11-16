@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public Button radarButton;
     public Vector2 moveInputX;
     public Vector2 moveInputY;
+    public Vector2 moveInput;
     [SerializeField] private Rigidbody2D rb;
 
     private void Awake()
@@ -22,6 +23,13 @@ public class PlayerController : MonoBehaviour
         private void FixedUpdate()
     {
         // mouvement horizontal
-        rb.linearVelocity = new Vector2(moveInputX.x * moveSpeed, moveInputY.y * moveSpeed).normalized;
+        rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, moveInput.y * moveSpeed).normalized;
     }
+    public void OnMove(InputAction.CallbackContext context)
+    {
+        moveInput = context.ReadValue<Vector2>();
+        if (context.canceled)
+            moveInput = Vector2.zero;
+    }
+
 }
