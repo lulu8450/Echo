@@ -4,14 +4,8 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    [Header("Movement Settings")]
-    public float moveSpeed = 5f;
+    public float moveSpeed = 8f;
     public PlayerInput playerInput;
-
-    [Header("Interaction Settings")]
-    public Button radarButton;
-    public Vector2 moveInputX;
-    public Vector2 moveInputY;
     public Vector2 moveInput;
     [SerializeField] private Rigidbody2D rb;
 
