@@ -3,40 +3,48 @@ using DG.Tweening;
 
 public class Radar : MonoBehaviour
 {
-    public float radiusMin = 0;
-    public float radiusMax = 5;
-    public float scanDurration = 1;
-    bool inRadar = false;
+    public float radiusMin = 0f; 
+    public float radiusMax = 5f;
+    public float scanDurration = 1f;
 
     void Start()
     {
-        transform.localScale = Vector3.one * radiusMin;
+        // Utiliser Vector3.zero pour s'assurer que l'onde est invisible au début
+        transform.localScale = Vector3.zero * radiusMin; 
+        
+        // Lancer l'animation dès l'apparition, si ce prefab est instancié par le joueur
+        UseRadar(); 
     }
-    public void UseRadar()
+    public void UseRadar() 
     {
-        if (inRadar) return;
-        inRadar = true;
-        transform.localScale = Vector3.one * radiusMin;
-        transform.DOScale(radiusMax,scanDurration).OnComplete(EndRadar);
+        transform.DOScale(radiusMax, scanDurration).OnComplete(EndRadar).SetEase(Ease.OutSine);
     }
 
     private void EndRadar()
     {
-        inRadar = false;
         transform.localScale = Vector3.one * radiusMin;
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("ObjectBorder"))
         {
-            collision.GetComponent<lunetteDeSoleil>().borderActivate = true;
+            // Appeler la nouvelle fonction plus propre
+            lunetteDeSoleil revealedObj = collision.GetComponent<lunetteDeSoleil>();
+            if (revealedObj != null)
+            {
+                revealedObj.SetVisibility(true);
+            }
         }
     }
     void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("ObjectBorder"))
         {
-            collision.GetComponent<lunetteDeSoleil>().borderActivate = false;
+            lunetteDeSoleil revealedObj = collision.GetComponent<lunetteDeSoleil>();
+            if (revealedObj != null)
+            {
+                revealedObj.SetVisibility(false); 
+            }
         }
     }
 }

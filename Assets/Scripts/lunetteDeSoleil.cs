@@ -2,22 +2,36 @@ using UnityEngine;
 
 public class lunetteDeSoleil : MonoBehaviour
 {
-    public GameObject borderObject;
-    public bool borderActivate;
-    public Material litMaterial;
-    public Material unlitMaterial;
+    [Header("Référence Visuelle")]
+    [SerializeField] private GameObject borderObject;
+    [SerializeField] private Material litMaterial;
+    [SerializeField] private Material unlitMaterial;
+    private SpriteRenderer spriteRenderer;
 
-    void Update()
+    void Awake()
     {
-        if (borderActivate == true)
+        // 1. Cacher la référence coûteuse
+        spriteRenderer = GetComponent<SpriteRenderer>(); 
+        
+        // S'assurer que l'objet commence invisible/non-révélé
+        SetVisibility(false); 
+    }
+    public void SetVisibility(bool isVisible)
+    {
+        // Si borderObject est assigné, on l'active ou le désactive
+        if (borderObject != null)
         {
-            borderObject.SetActive(true);
-            gameObject.GetComponent<SpriteRenderer>().material = unlitMaterial;
+            borderObject.SetActive(isVisible);
+        }
+        
+        // On bascule le Material une seule fois
+        if (isVisible)
+        {
+            spriteRenderer.material = unlitMaterial;
         }
         else 
         {
-            borderObject.SetActive(false);
-            gameObject.GetComponent<SpriteRenderer>().material = litMaterial;
+            spriteRenderer.material = litMaterial;
         }
     }
 }
