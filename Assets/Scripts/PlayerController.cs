@@ -7,7 +7,12 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 8f;
     public PlayerInput playerInput;
     public Vector2 moveInput;
+    public Button buttonInteract;
+    IInteractable interact;
+    bool canInteract;
     [SerializeField] private Rigidbody2D rb;
+
+    [SerializeField] private Radar radar;
 
     private void Awake()
     {
@@ -25,5 +30,33 @@ public class PlayerController : MonoBehaviour
         if (context.canceled)
             moveInput = Vector2.zero;
     }
+    public void OnInteractButton()
+    {
+        if(canInteract)
+        {
+            interact.OnInteract();
+        }
+        else
+        {
+            radar.UseRadar();
+        }
+    }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        interact = collision.GetComponent<IInteractable>();
 
+        if(interact != null)
+        {
+           canInteract = true;
+        }
+        
+    }
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        interact = collision.GetComponent<IInteractable>();
+        if(interact != null)
+        {
+           canInteract = false;
+        }
+    }
 }

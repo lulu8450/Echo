@@ -1,13 +1,22 @@
 fileFormatVersion: 2
-guid: 27a14b7706028ea4697ce7aaa7cf5985
+guid: 49f78d5dbaf8806429b9b999424ddbd1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4889948215845615631
-    second: Desks&Shelfs_0
+      213: 2142023413604319806
+    second: fixtures_BA_0
   - first:
-      213: -5597233654076434745
-    second: Desks&Shelfs_1
+      213: 1139324243355928867
+    second: fixtures_BA_1
+  - first:
+      213: -7366894489222144240
+    second: fixtures_BA_2
+  - first:
+      213: 2054163155403834821
+    second: fixtures_BA_3
+  - first:
+      213: -7680703558453618354
+    second: fixtures_BA_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -54,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -104,7 +113,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -116,177 +125,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Desks&Shelfs_0
+      name: fixtures_BA_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
-        width: 32
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f0878878ef59cd340800000000000000
-      internalID: 4889948215845615631
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Desks&Shelfs_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7c699e3a5a1a252b0800000000000000
-      internalID: -5597233654076434745
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Desks&Shelfs_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 26
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d56967b68b473824cb7b06d1bb461d55
-      internalID: -522059834
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Desks&Shelfs_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f5d4dee4fc40ea643b60fff4de0bb2de
-      internalID: -2008160578
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Desks&Shelfs_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 48
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5df36e283e1762a4a8a475e2446ba1be
-      internalID: 467291844
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Desks&Shelfs_5
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 2
-        width: 32
-        height: 14
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 183a258f8ff49bd4a9cb5b2fef4fe88e
-      internalID: 369685521
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Desks&Shelfs_6
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 0
-        width: 48
-        height: 10
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c2e9e047dfbebde41ad4059ae3140098
-      internalID: -895860798
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Desks&Shelfs_7
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 16
-        width: 32
-        height: 16
+        x: 14
+        y: 63
+        width: 67
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 0776a00a5b3dcca4f98b82f9e5ad7c32
-      internalID: -1154421352
+      spriteID: e32847c12fef9bd10800000000000000
+      internalID: 2142023413604319806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fixtures_BA_1
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 77
+        width: 34
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3298839ec51bfcf00800000000000000
+      internalID: 1139324243355928867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fixtures_BA_2
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 51
+        width: 24
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01f91285e7883c990800000000000000
+      internalID: -7366894489222144240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fixtures_BA_3
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 15
+        width: 67
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c58a84a18ad18c10800000000000000
+      internalID: 2054163155403834821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fixtures_BA_4
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 29
+        width: 34
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e491b45cec8a86590800000000000000
+      internalID: -7680703558453618354
       vertices: []
       indices: 
       edges: []
@@ -295,7 +238,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b377ffeb5d6d7a544b6cfdbaabadc0e4
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -305,14 +248,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Desks&Shelfs_0: 4889948215845615631
-      Desks&Shelfs_1: -5597233654076434745
-      Desks&Shelfs_2: -522059834
-      Desks&Shelfs_3: -2008160578
-      Desks&Shelfs_4: 467291844
-      Desks&Shelfs_5: 369685521
-      Desks&Shelfs_6: -895860798
-      Desks&Shelfs_7: -1154421352
+      fixtures_BA_0: 2142023413604319806
+      fixtures_BA_1: 1139324243355928867
+      fixtures_BA_2: -7366894489222144240
+      fixtures_BA_3: 2054163155403834821
+      fixtures_BA_4: -7680703558453618354
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

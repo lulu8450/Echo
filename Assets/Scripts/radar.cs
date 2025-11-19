@@ -10,10 +10,7 @@ public class Radar : MonoBehaviour
     void Start()
     {
         // Utiliser Vector3.zero pour s'assurer que l'onde est invisible au début
-        transform.localScale = Vector3.zero * radiusMin; 
-        
-        // Lancer l'animation dès l'apparition, si ce prefab est instancié par le joueur
-        UseRadar(); 
+        transform.localScale = Vector3.zero * radiusMin;
     }
     public void UseRadar() 
     {
