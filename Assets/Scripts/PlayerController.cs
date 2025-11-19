@@ -7,7 +7,6 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 8f;
     public PlayerInput playerInput;
     public Vector2 moveInput;
-    public Button buttonInteract;
     IInteractable interact;
     bool canInteract;
     [SerializeField] private Rigidbody2D rb;

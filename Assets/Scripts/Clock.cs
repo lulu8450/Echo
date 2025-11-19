@@ -6,7 +6,11 @@ public class Clock : MonoBehaviour , IInteractable
     Animator animator;
     AudioSource audioSource;
     public GameObject ui;
-    public Transform player;
+    public GameObject player;
+    public AudioSource playerAudioSource;
+    public AudioClip reveil1;
+    public AudioClip reveil2;
+    public AudioClip reveil3;
     public PlayerController playerController;
 
 
@@ -25,8 +29,13 @@ public class Clock : MonoBehaviour , IInteractable
         gameObject.GetComponent<lunetteDeSoleil>().SetVisibility(true);
         animator.Play("Shake");
         audioSource.Play();
-        yield return new WaitForSeconds(2.0f);
-        player.position = new Vector3(-6, 14, 0);
+        playerAudioSource.PlayOneShot(reveil1);
+        yield return new WaitForSeconds(reveil1.length);
+        player.transform.position = new Vector3(-6, 14, 0);
+        playerAudioSource.PlayOneShot(reveil2);
+        yield return new WaitForSeconds(reveil2.length);
+        playerAudioSource.PlayOneShot(reveil3);
+        yield return new WaitForSeconds(reveil3.length);
         playerController.GetComponent<CapsuleCollider2D>().enabled = true;
         playerController.enabled = true;
         ui.SetActive(true);
