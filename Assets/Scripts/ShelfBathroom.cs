@@ -23,6 +23,6 @@ public class shelfBathroom : MonoBehaviour , IInteractable
         yield return new WaitForSeconds(medocs2.length);
         player.GetComponent<AudioSource>().PlayOneShot(medocsGood);
         yield return new WaitForSeconds(medocsGood.length);
-        player.GetComponent<changeRoom>().medocRappel = false;
+        leaveDoor.GetComponent<changeRoom>().medocRappel = false;
     }
 }

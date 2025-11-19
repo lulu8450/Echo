@@ -7,8 +7,8 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 8f;
     public PlayerInput playerInput;
     public Vector2 moveInput;
-    IInteractable interact;
-    bool canInteract;
+    public IInteractable interact;
+    public bool canInteract;
     [SerializeField] private Rigidbody2D rb;
 
     [SerializeField] private Radar radar;

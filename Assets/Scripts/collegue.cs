@@ -5,17 +5,23 @@ using UnityEngine;
 public class collegue : MonoBehaviour
 {
     public List<AudioClip> clipList = new List<AudioClip>();
+    public bool isDialogueStart;
     public GameObject player;
     public GameObject ui;
     
-    void Start()
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        StartCoroutine(startDialogue());
+        if(!isDialogueStart)
+        {
+            isDialogueStart = true;
+            StartCoroutine(startDialogue());
+        }
     }
     IEnumerator startDialogue()
     {
         gameObject.GetComponent<lunetteDeSoleil>().SetVisibility(true);
         player.GetComponent<CapsuleCollider2D>().enabled = false;
+        player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
         player.GetComponent<PlayerController>().enabled = false;
         ui.SetActive(false);
         int index = 0;
@@ -23,10 +29,12 @@ public class collegue : MonoBehaviour
         {
             player.GetComponent<AudioSource>().PlayOneShot(clipList[index]);
             yield return new WaitForSeconds(clipList[index].length);
+            index++;
         }
         gameObject.GetComponent<lunetteDeSoleil>().SetVisibility(false);
         player.GetComponent<CapsuleCollider2D>().enabled = true;
         player.GetComponent<PlayerController>().enabled = true;
+        player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
         ui.SetActive(true);
     }
 }
