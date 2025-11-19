@@ -10,7 +10,7 @@ public class MenuController : MonoBehaviour
 
     public void OnStartClick()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Home");
     }
 
     public void OnSettingClick()
